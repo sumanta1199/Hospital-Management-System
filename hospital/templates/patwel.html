@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/docwelstyle.css' %}"> -->
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+    <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Doctor List</h5>
+                    <div><img src="{% static 'img/doclist.jpg' %}" class="img-fluid rounded-start" alt="..."></div>
+                    <div class="btn btn-primary"><a href="doclist" style="color:white ; text-decoration: none;">Click
+                            here</a></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Timing Slot</h5>
+                    <div><img src="{% static 'img/timing.jpg' %}" class="img-fluid rounded-start" alt="..."></div>
+                    <div class="btn btn-primary"><a href="timing" style="color:white ; text-decoration: none;">Click
+                            here</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Doctor Booking</h5>
+                    <div><img src="{% static 'img/docbook.jpg' %}" class="img-fluid rounded-start" alt="..."></div>
+                    <div class="btn btn-primary"><a href="docbook" style="color:white ; text-decoration: none;">Click
+                            here</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

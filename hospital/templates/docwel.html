@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/docwelstyle.css' %}">
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+  <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+
+{% block body %}
+<div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Check Appointment</h5>
+          <div><img src="{% static 'img/checkapp.jpg' %}" class="img-fluid rounded-start" alt="..."></div>
+          <div class="btn btn-primary"><a href="apporment" style="color:white ; text-decoration: none;">Click here</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Patient Personal details</h5>
+          <div><img src="{% static 'img/personal.jpg' %}" class="img-fluid rounded-start" alt="..."></div>
+          <div class="btn btn-primary"><a href="patdetails" style="color:white ; text-decoration: none;">Click here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Patient Medical History</h5>
+          <div><img src="{% static 'img/medicine .jpg' %}" class="img-fluid rounded-start" alt="..."></div>
+          <div class="btn btn-primary"><a href="medical" style="color:white ; text-decoration: none;">Click here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

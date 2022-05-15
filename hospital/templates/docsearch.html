@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/showstyle.css' %}">
+{% endblock %}
+
+{% block login %}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-expanded="false">
+        Login
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="doctorlog">Doctor</a>
+        <a class="dropdown-item" href="patientlog">Patient</a>
+    </div>
+</li>
+{% endblock %}
+
+{% block body %}
+<table align="center">
+    <tr>
+        <td>Name &emsp;</td>
+        <td>Specialization &emsp;</td>
+        <td>Education &emsp;</td>
+        <td>Phone No &emsp;</td>
+    </tr>
+    {% for doc in d %}
+    <tr>
+        <td>{{doc.name}}</td>
+        <td>{{doc.spe}}</td>
+        <td>{{doc.edu}}</td>
+        <td>{{doc.phno}}</td>
+    </tr>
+    {% endfor %}
+</table><br><br><br><br><br><br><br><br>
+{% endblock %}

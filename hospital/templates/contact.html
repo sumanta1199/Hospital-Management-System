@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/logstyle.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/footerstyle.css' %}">
+{% endblock %}
+
+{% block login %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+      data-toggle="dropdown" aria-expanded="false">
+      Login
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="doctorlog">Doctor</a>
+      <a class="dropdown-item" href="patientlog">Patient</a>
+  </div>
+</li>
+{% endblock %}
+
+{% block body %}
+<!-- <h1 id="h1">Contact US<h1> -->
+  <section class="bg-light my-5">
+    <div class=" main heading my-5 pt-0">
+        <div class="text-center">
+          <h1 class="display-4">Contact Us</h1>
+
+          <hr class="w-25 mx-auto">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-8 col-10 col-md-8 mx-auto">
+            <form method="con" request="post">
+              <div class="mb-3">
+                <label for="exampleInputText" class="form-label">Name</label>
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="me-4">Gender</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadioOptions" type="radio" id="inlineCheckbox1"
+                    value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadioOptions" type="radio" id="inlineCheckbox2"
+                    value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" placeholder="abc@gmail.com" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Your Query</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="mb-2">select your city</label>
+                <label for="exampleDataList" class="form-label">Datalist example</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                  placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                  <option value="kharagpur">
+                  <option value="kolkata">
+                  <option value="delhi">
+                  <option value="durgapur">
+                  <option value="bankura">
+                </datalist>
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label">Upload your prescription</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <div class="text-center">
+              <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>	
+{% endblock %}

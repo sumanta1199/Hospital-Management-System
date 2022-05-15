@@ -1,0 +1,39 @@
+<html>
+<body>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone No</th>
+<th>Password</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Blood Group</th>
+<th>Delete</th>
+<th>Edit</th>
+</tr>
+{% for pat in p %}
+  <tr>
+  <td>{{pat.id}}</td>
+  <td>{{pat.name}}</td>
+  <td>{{pat.email}}</td>
+  <td>{{pat.phno}}</td>
+  <td>{{pat.pwd}}</td>
+  <td>{{pat.age}}</td>
+  <td>{{pat.gender}}</td>
+  <td>{{pat.blood_group}}</td>
+  <td><a href="patdelete/{{pat.id}}">Delete</a></td>
+  <td><a href="patedit/{{pat.id}}">Edit</a></td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
+
+
+
+
+
+
+

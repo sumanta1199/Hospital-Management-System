@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/logstyle.css' %}"> -->
+{% endblock %}
+
+{% block login %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+    aria-expanded="false">
+    Login
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="doctorlog">Doctor</a>
+    <a class="dropdown-item" href="patientlog">Patient</a>
+  </div>
+</li>
+{% endblock %}
+
+{% block body %}
+<section class="main heading my-0">
+  <div class="text-center">
+    <h1 class="display-4">gallery</h1>
+    <hr class=" w-25 mx-auto">
+  </div>
+  <div class="container my-5">
+    <div class="row gy-0 gx-3">
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery1.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery2.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery4.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery5.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery6.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery7.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery8.jpg ' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery9.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+        <figure>
+          <img src="{% static 'img/gallery10.jpg' %}" alt="image loading" class="img-fluid">
+        </figure>
+      </div>
+    </div>
+  </div>
+  <section class="main heading my-0 py-0">
+    <div class="container-fluid bg-info bg-gradient">
+      <div class="row">
+        <div class="col-xxl-12 col-12 py-5 text-center">
+          <h1 class="text-white">check our videoes</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iusto iure illo.</p>
+          <a href="https://www.youtube.com/watch?v=oUOM-DI2-EA" target="blank">
+            <button type="button" class="btn btn-outline-light" class="bi bi-box-arrow-right"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                <path fill-rule="evenodd"
+                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+              </svg>check out</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

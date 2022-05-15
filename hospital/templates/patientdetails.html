@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/showstyle.css' %}"> -->
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+    <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<h2 style="text-align:center">Patient Details</h2><br>
+<table id="example">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Blood Group</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pat in p %}
+        <tr>
+            <td>{{pat.id}}</td>
+            <td>{{pat.name}}</td>
+            <td>{{pat.email}}</td>
+            <td>{{pat.phno}}</td>
+            <td>{{pat.age}}</td>
+            <td>{{pat.gender}}</td>
+            <td>{{pat.blood_group}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

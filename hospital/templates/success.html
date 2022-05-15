@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'css/patstyle.css' %}">
+
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+    <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<br><br>
+<div style="text-align: center;">
+    <img src="{% static 'img/check.jpg' %}" alt="My image" height="100px" width="100px" />
+    <h1 id="h1">Appointment booked Successfully!!!<h1></h1>
+</div>
+<br><br><br><br><br><br>
+{% endblock %}

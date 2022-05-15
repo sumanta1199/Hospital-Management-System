@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/logstyle.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/footerstyle.css' %}"> -->
+{% endblock %}
+
+{% block login %}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+        data-toggle="dropdown" aria-expanded="false">
+        Login
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="doctorlog">Doctor</a>
+        <a class="dropdown-item" href="patientlog">Patient</a>
+    </div>
+    
+</li>                     
+{% endblock %}
+
+{% block body %}
+
+<div class="container my-3">
+    <!-- <h2>Coding Articles by iCoder</h2> -->
+    {% for post in allPosts  %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Article  by {{post.author}}</strong>
+            <h3 class="mb-0"><a class="text-dark" href="{{post.slug}}">{{post.title}} </a> </h3>
+            <div class="mb-1 text-muted">{{post.datetime}}</div>
+            <p class="card-text mb-auto">{{post.content|safe| truncatechars:500}}</p>
+            <div class="my-2">
+            	<a href="{{post.slug}}" role="button" class="btn btn-primary">Continue reading</a>
+            </div>
+            
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <img src="/media/{{post.image}}" class="bd-placeholder-img" width="250" height="300"  aria-label="Placeholder: Thumbnail">
+                <title>No Photo</title>
+             
+            </svg>
+        </div>
+        </div>
+
+        {% endfor %}
+    </div>
+ {% endblock %}

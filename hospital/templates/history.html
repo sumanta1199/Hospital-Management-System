@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/showstyle.css' %}">
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+  <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<table align="center">
+  <tr style="text-align: center;">
+    <td><b>Name &nbsp; &nbsp;</b></td>
+    <td><b>Medical </b></td>
+  </tr>
+  {% for med in n %}
+  <tr style="text-align: center;">
+    <td>{{med.name}} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
+    <td>{{med.pre}}</td>
+  </tr>
+  {% endfor %}
+</table><br><br><br><br><br><br><br><br>
+</form>
+{% endblock %}

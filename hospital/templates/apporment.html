@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/appstyle.css' %}">
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+  <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<h1 text-align="center">Check Appointment</h1>
+<table text-align="center" id="example">
+  <thead>
+    <tr>
+      <td>Patient Name &emsp;</td>
+      <td>Date &emsp;</td>
+      <td>Time &emsp;</td>
+      <td>Update &emsp;</td>
+      <!-- <td>Delete </td>  -->
+    </tr>
+  </thead>
+  <tbody>
+    {% for bk in b %}
+    <tr>
+      <td>{{bk.name}}</td>
+      <td>{{bk.date}}</td>
+      <td>{{bk.time}}</td>
+      <td><a href="update/{{bk.id}}"  style="text-decoration: none;">Update</a></td>
+      <!-- <td><a href="updelete/{{bk.id}}">Delete</a></td>  -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

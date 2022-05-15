@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/logstyle.css' %}"> -->
+{% endblock %}
+{% block logout %}
+<li class="nav-item">
+    <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<div>
+    <form action="../upd" method="post">
+        {% csrf_token %}
+        <div style="text-align: center;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{u.name}}">
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <label for="prescription">Doctor Prescription:</label><br>
+            <textarea type="text" id="prescription" name="pre" rows="10" cols="40" value=""> </textarea>
+            <div>
+                <input type="submit" id="btn" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

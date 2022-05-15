@@ -1,0 +1,30 @@
+body{
+	background-color: F5F5F5;
+}
+
+#h1
+{
+	color:#ff0000;
+	text-align:center;
+	font-size:3.5em;
+	margin-bottom:40px;
+}
+#btn{
+	color:black;
+	background:#04deb6;
+	width:150px;
+	height:50px;
+	font-size:2.0em;
+	margin-top:20px;
+
+}
+#log{
+	color:blue;
+	font-size:1.5em;
+	padding:15px;
+}
+
+td{
+	background-color: F5F5F5;
+}
+	

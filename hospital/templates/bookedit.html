@@ -1,0 +1,22 @@
+<html>
+<body>
+<form method="post" action="../edbk/{{b.id}}">
+{% csrf_token %}
+<table align="center">
+<tr><th><label for="name">Name:</label></th>
+<td><input type="text" id="name" name="name" value="{{b.name}}"></td></tr>
+<tr><th><label for="email">Email:</label></th>
+<td><input type="text" id="email" name="email" value="{{b.email}}"></td></tr>
+<tr><th><label for="phno">Phone No:</label></th>
+<td><input type="text" name="phno" value="{{b.phno}}"></td></tr>
+<tr><th><label for="date">Date:</label></th>
+<td><input type="date" name="date" value="{{b.date}}"></td></tr>
+<tr><th><label for="time">Time:</label></th>
+<td><input type="time" name="time" value="{{b.time}}"></td></tr>
+<tr><th><label for="fees">Fees:</label></th>
+<td><input type="text" name="fees" value="{{b.fees}}"></td></tr>
+<td><input type="submit" id="btn" value="Submit"><td>
+</table>
+</form>
+</body>
+</html>

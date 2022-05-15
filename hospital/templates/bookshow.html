@@ -1,0 +1,30 @@
+<html>
+<body>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone No</th>
+<th>Date</th>
+<th>Time</th>
+<th>Fees</th>
+<th>Delete</th>
+<th>Edit</th>
+</tr>
+{% for bk in b %}
+  <tr>
+  <td>{{bk.id}}</td>
+  <td>{{bk.name}}</td>
+  <td>{{bk.email}}</td>
+  <td>{{bk.phno}}</td>
+  <td>{{bk.date}}</td>
+  <td>{{bk.time}}</td>
+  <td>{{bk.fees}}</td>
+  <td><a href="bkdelete/{{bk.id}}">Delete</a></td>
+  <td><a href="bkedit/{{bk.id}}">Edit</a></td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>

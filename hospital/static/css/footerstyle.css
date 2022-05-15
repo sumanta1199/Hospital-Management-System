@@ -1,0 +1,20 @@
+footer{
+    /* background-color: black; */
+    position: absolute;
+    color: white;
+    padding: 9px 20px;
+	top:100px;
+	
+
+}
+.center{
+    text-align: center;
+}
+
+.ft{
+	margin-bottom:5px;
+}
+
+td{
+	font-size:2em;
+}

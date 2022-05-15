@@ -1,0 +1,36 @@
+<html>
+<body>
+<form method="post" action="../patedcode/{{p.id}}">
+{% csrf_token %}
+<table>
+<tr>
+<th><label for="name">Name:</label></th>
+<td><input type="text" id="name" name="name" value="{{p.name}}"></td></tr>
+<th><label for="name">Email:</label></th>
+<td><input type="text" id="email" name="email" value="{{p.email}}"></td></tr>
+<th><label for="phno">Phone No:</label></th>
+<td><input type="text" name="phno" value="{{p.phno}}"></td></tr>
+<th><label for="age">Password:</label></th>
+<td><input type="text" id="pwd" name="pwd" value="{{p.pwd}}"></td></tr>
+<th><label for="age">Age:</label></th>
+<td><input type="text" id="age" name="age" value="{{p.age}}"></td></tr>
+<th><label for="gender">Gender:</label></th>
+<td><input id="male" type="radio" name="gender" value="male">Male
+<input id="female" type="radio" name="gender" value="female">Female
+<input id="other" type="radio" name="gender" value="other">Other</td></tr>
+<th><label for="blood">Blood Group:</label>
+<select id="blood" name="blood_group">
+<option>select</option>
+<option value="a+">A+</option>
+<option value="a-">A-</option>
+<option value="b+">B+</option>
+<option value="b-">B-</option>
+<option value="o+">O+</option>
+<option value="o-">O-</option>
+<option value="ab+">AB+</option>
+<option value="ab-">AB-</option>
+</select></th>
+<td><input type="submit" id="btn" value="Submit"></td>
+</form>
+</body>
+</html>

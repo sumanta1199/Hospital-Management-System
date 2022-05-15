@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/about.css' %}"> -->
+{% endblock %}
+
+{% block login %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+    aria-expanded="false">
+    Login
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="doctorlog">Doctor</a>
+    <a class="dropdown-item" href="patientlog">Patient</a>
+  </div>
+</li>
+{% endblock %}
+
+{% block body %}
+<section class="main heading my-5">
+  <div class="text-center">
+    <h1 class="display-4">About us</h1>
+    <hr class=" w-25 mx-auto">
+  </div>
+</section>
+<div class="container">
+  <div class="row" class="my-5">
+    <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+      <figure>
+        <img src="{% static 'img/about1.jpg' %}" alt="image loading" class="container-fluid">
+      </figure>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+      <h1>About Us</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nobis harum quam veniam similique beatae
+        placeat inventore necessitatibus eveniet fuga consectetur sed quibusdam saepe at voluptatem optio, incidunt,
+        in a enim rem quis. Doloremque libero impedit molestiae ex voluptas, aliquid pariatur ea et incidunt nisi odit
+        consectetur aliquam maiores repellat velit facilis saepe nesciunt! Doloribus?</p>
+      <button type="button" class="btn btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="right"
+        title="Our Achievement">Check More</button>
+    </div>
+  </div>
+
+  <h1 text-align="center">Quality Healthcare Made Simple</h1>
+  <h2 text-align="center">Our Mission</h2>
+  <p text-align="center">Evileye is on a mission to make quality healthcare affordable and accessible for over a
+    billion+ Indians. We believe in empowering our users with the most accurate, comprehensive, and curated information
+    and care, enabling them to make better healthcare decisions.</p>
+  <h2 text-align="center">Our approach to healthcare</h2>
+  <p text-align="center">Providing high-quality, trusted, and accessible healthcare is our reason for being</p>
+
+  <div class="card-group">
+    <div class="card" id="ab">
+      <img src="{% static 'img/connect.png' %}" height="200px" width="200px" class="card-img-top" alt="not avaliable">
+      <div class="card-body">
+        <h5 class="card-title">Connect</h5>
+        <p class="card-text">We understand healthcare goes beyond signs, symptoms, diagnosis, and treatment. It’s about
+          the deep connection between doctors and patients that leads to continuous care and sustained, better outcomes.
+        </p>
+      </div>
+    </div>
+    <div class="card" id="ab">
+      <img src="{% static 'img/trust.png' %}" height="200px" width="200px" class="card-img-top" alt="not avaliable">
+      <div class="card-body">
+        <h5 class="card-title">Trust</h5>
+        <p class="card-text">Practo works on trust. We are aware of the responsibility placed on us by 30 crore+
+          patients and over a lakh doctors. We always have and always will do everything we possibly can to uphold this
+          trust</p>
+
+      </div>
+    </div>
+
+    <div class="card" id="ab">
+      <img src="{% static 'img/transparency.png' %}" height="200px" width="200px" class="card-img-top"
+        alt="not avaliable">
+      <div class="card-body">
+        <h5 class="card-title">Transparency</h5>
+        <p class="card-text">We believe in full disclosure. We believe in communicating openly and honestly, and holding
+          ourselves to the highest ethical standards.</p>
+
+      </div>
+    </div>
+  </div>
+  {% endblock %}

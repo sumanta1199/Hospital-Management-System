@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/logstyle.css' %}">
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+    <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<!-- <h1 id="h1">Welcome To Evileye Hospital</h1> -->
+<table text-align="center">
+    <tr>
+        <th>Timing Slot &emsp;</th>
+    </tr>
+    {% for doc in d %}
+    <tr>
+        <td>Timing Solt</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

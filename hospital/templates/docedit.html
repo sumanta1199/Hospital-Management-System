@@ -1,0 +1,28 @@
+<html>
+<body>
+<form method="post" action="../docedcode/{{d.id}}">
+{% csrf_token %}
+<table>
+<tr><th><label for="name">Name:</label></th>
+<td><input type="text" id="name" name="name" value="{{d.name}}"></td></tr>
+<tr><th><label for="name">Email:</label></th>
+<td><input type="text" id="email" name="email" value="{{d.email}}"></td></tr>
+<tr><th><label for="phno">Phone No:</label></th>
+<td><input type="text" name="phno" value="{{d.phno}}"></td></tr>
+<tr><th><label for="age">Password:</label></th>
+<td><input type="text" id="pwd" name="pwd" value="{{d.pwd}}"></td></tr>
+<tr><th><label for="edu">Education:</label></th>
+<td><input type="text" id="edu" name="edu" value="{{d.edu}}"></td></tr>
+<tr><th><label for="spe">Specialization:</label></th>
+<td><input type="text" id="spe" name="spe" value="{{d.spe}}"></td></tr>
+<tr><th><label for="age">Age:</label></th>
+<td><input type="text" id="age" name="age" value="{{d.age}}"></td></tr>
+<tr><th><label for="gender">Gender:</label></th>
+<td><input id="male" type="radio" name="gender" value="male">Male
+<input id="female" type="radio" name="gender" value="female">Female
+<input id="other" type="radio" name="gender" value="other">Other</td></tr>
+
+<td><input type="submit" id="btn" value="Submit"></td>
+</form>
+</body>
+</html>

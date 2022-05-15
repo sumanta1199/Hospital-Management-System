@@ -1,0 +1,34 @@
+<html>
+<body>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone No</th>
+<th>Password</th>
+<th>Education</th>
+<th>Specialization</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Delete</th>
+<th>Edit</th>
+</tr>
+{% for doc in d %}
+  <tr>
+  <td>{{doc.id}}</td>
+  <td>{{doc.name}}</td>
+  <td>{{doc.email}}</td>
+  <td>{{doc.phno}}</td>
+  <td>{{doc.pwd}}</td>
+  <td>{{doc.edu}}</td>
+  <td>{{doc.spe}}</td>
+  <td>{{doc.age}}</td>
+  <td>{{doc.gender}}</td>
+  <td><a href="docdelete/{{doc.id}}">Delete</a></td>
+  <td><a href="docedit/{{doc.id}}">Edit</a></td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>

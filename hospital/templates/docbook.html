@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/showstyle.css' %}"> -->
+{% endblock %}
+
+{% block logout %}
+<li class="nav-item">
+    <a class="nav-link" href="signout">Logout</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<h1>Doctor Booking</h1>
+<table text-align="center" id="example">
+    <thead>
+        <tr>
+            <th>Doctor List &emsp;</th>
+            <th>Doctor Specialization &emsp;</th>
+            <th>Doctor Booking &emsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doc in d %}
+        <tr>
+            <td>{{doc.name}}</td>
+            <td>{{doc.spe}}</td>
+            <td><a href="booking"  style="text-decoration: none;">Doctor Booking</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

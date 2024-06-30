@@ -3,6 +3,7 @@ Install Django:
 
 Change dir and target dir hms:
     cd Hospital-Management-System\hms
+
 Run Server:
     Project\Hospital-Management-System\hms> py manage.py runserver
 

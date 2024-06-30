@@ -1,4 +1,4 @@
-INstall Django: 
+Install Django: 
     pip install django
 
 Change dir and target dir hms:
